@@ -1,0 +1,19 @@
+# 依赖
+node_modules/
+
+# 构建产物
+dist/
+android/build/
+
+# 第三方工具链（体积大，用 tools/unpack_sdk.py 从 dl/ 解压）
+tools/jdk/
+tools/android-sdk/
+tools/_tmp_*/
+tools/rcedit-x64.exe
+dl/
+
+# 系统与临时文件
+*.log
+.DS_Store
+Thumbs.db
+desktop/.npmrc
