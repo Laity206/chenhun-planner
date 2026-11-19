@@ -102,12 +102,14 @@ npm install
 npx electron-builder --win portable     # 产物在 dist/desktop/
 
 # 安卓端（不需要 Android Studio / Gradle）
-python tools/unpack_sdk.py              # 首次：解压 JDK 与 SDK
+python tools/unpack_sdk.py              # 首次：缺什么下什么（JDK 17 + build-tools + platform，约 300MB）
 bash tools/build_apk.sh                 # 产物在 dist/android/
 ```
 
 安卓端是手写构建链：`aapt2` 编译资源 → `javac` 编译 → `d8` 转 dex → `zipalign` → `apksigner` 签名。
-SDK 与 JDK 不随仓库分发，`tools/unpack_sdk.py` 会从 `dl/` 目录里找压缩包解压。
+
+`unpack_sdk.py` 可反复执行：已就绪的会跳过，缺的自动从 Adoptium / Google 下载，也支持先把压缩包放进 `dl/` 再离线解压。
+工具链不随仓库分发（`tools/jdk`、`tools/android-sdk` 已在 `.gitignore` 里）。
 
 ## 目录结构
 
