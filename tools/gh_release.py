@@ -21,9 +21,9 @@ RELEASE_DIR = os.path.join(ROOT, "dist", "release")
 NOTES = os.path.join(RELEASE_DIR, "RELEASE_NOTES.md")
 
 ASSETS = [
-    "ChenhunPlanner-1.0.0-win-x64.zip",
+    "ChenhunPlanner-1.0.apk",              # 小文件先传，网络一恢复就能落地
     "ChenhunPlanner-1.0.0-portable.exe",
-    "ChenhunPlanner-1.0.apk",
+    "ChenhunPlanner-1.0.0-win-x64.zip",
 ]
 
 TOKEN = os.environ.get("GITHUB_TOKEN", "").strip()
