@@ -48,7 +48,12 @@
 
 ## 安装
 
-**Windows**：下载 `ChenhunPlanner-1.0.0-portable.exe`，双击运行。免安装，不写注册表；数据存在 `%APPDATA%\晨昏日程`。
+**Windows**（两种，任选）
+
+- `ChenhunPlanner-1.0.0-portable.exe`：单文件，双击即用，不写注册表。首次运行 Windows 需要解压到临时目录，若被杀软拦下会一闪而过。
+- `ChenhunPlanner-1.0.0-win-x64.zip`：**推荐**。解压到任意目录，双击 `ChenhunPlanner.exe` 即可，不经过临时目录，最不容易被拦。
+
+数据存在 `%APPDATA%\晨昏日程`，两种方式通用。
 
 **Android**：下载 `ChenhunPlanner-1.0.apk`，安装时允许「未知来源」。数据存在应用私有目录，覆盖升级不会丢。
 
